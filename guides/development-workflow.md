@@ -4,6 +4,7 @@
 - [Introduction](#introduction)
 - [The lifecycle of a story](#the-lifecycle-of-a-story)
 - [Working on a support ticket](#working-on-a-support-ticket)
+- [Local environment setup](#local-environment-setup)
 - [Deploying](#deploying)
 - [Branching](#branching)
 - [Committing](#committing)
@@ -200,6 +201,32 @@ This is the only time a branch should be based off of `master` instead of
 
 1. move the card on Trello into 'Deployed to production'
 1. update the [changelog](#tracking-changes)
+
+---
+
+## Local environment setup
+
+### Docker
+Docker is a tool which provides a way to manage and work on sites on your own computer more easily. Docker packages up all the necessary files, settings, data and dependencies needed to run the site on your computer into what are known as container images.
+
+#### How to switch between sites using Docker
+Switching between multiple sites on your local environment it may be necessary to stop and start them manually in the terminal with the following commands so that you can access each site on http://localhost.
+
+1. Stop a Docker instance with [docker-compose down](https://docs.docker.com/compose/reference/down/):
+
+    ```  
+    docker-compose down
+    ```
+
+  *The command stops containers and removes containers, networks, volumes, and images*
+
+2. Start a Docker instance with [docker-compose up](https://docs.docker.com/compose/reference/up/):
+
+    ```
+    docker-compose up -d
+    ```
+
+  *This command builds, (re)creates, starts, and attaches to containers for a service*
 
 ---
 
